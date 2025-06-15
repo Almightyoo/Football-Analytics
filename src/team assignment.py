@@ -135,7 +135,7 @@ if __name__ == "__main__":
     results = extract_team_assignments(
         video_path='assets/videos/15sec_input_720p.mp4',
         frame_indices=frame_indices,
-        model_path='models/finetuned_best.pt',
+        model_path='models/best.pt',
         num_teams=2,
         display=True
     )

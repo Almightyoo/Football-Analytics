@@ -216,12 +216,14 @@ def process_frame(frame: np.ndarray, _: int) -> np.ndarray:
 
 # < =============================================== Test ===============================================>
 
-print("Starting tracking and ReID process...")
-sv.process_video(
-    source_path=video_path,
-    target_path=output_path,
-    callback=process_frame
-)
 
-print("Processing complete. Output saved to:", output_path)
+if __name__ == "__main__":
+    print("Starting tracking and ReID process...")
+    sv.process_video(
+        source_path=video_path,
+        target_path=output_path,
+        callback=process_frame
+    )
+
+    print("Processing complete. Output saved to:", output_path)
 
