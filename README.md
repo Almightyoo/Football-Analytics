@@ -90,7 +90,8 @@ cd Football-Analytics
 ### 2. Set up Python Environment
 ```sh
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate # for macOS/Linux
+
 pip install -r requirements.txt
 git clone https://github.com/KaiyangZhou/deep-person-reid.git
 
@@ -98,7 +99,14 @@ git clone https://github.com/KaiyangZhou/deep-person-reid.git
 ### 3. Model and Assets Link
 - [Link to Model and assests](https://drive.google.com/drive/folders/1VAzygoEnSoDvWJQ2JVrM6O-O4Q7k5rm0?usp=sharing)
 
+
+### 4. Run the Model
+```sh
+python3 run src/main_tracking.py
+```
+
 ---
+
 
 
 
