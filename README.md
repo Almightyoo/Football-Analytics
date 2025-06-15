@@ -4,7 +4,11 @@ A computer vision pipeline for detecting, identifying, and continuously tracking
 
 At each frame, the system detects all players using YOLO, extracts their visual appearance embeddings using a ReID model, and links identities across frames to create smooth and accurate player tracks.
 
-This pipeline does real time football player tracking assigning each individual player a new id
+# Algoritm
+![Flowchart](results/flowchart.png)
+
+## Results
+![Team assignment](results/final_tracking_with_reid1-ezgif.com-optimize.gif)
 
 ---
 ##  Project Details
@@ -22,7 +26,6 @@ This project combines modern deep learning and computer vision techniques to cre
   - `ball`
 - The model achieves accurate and real-time object localization using bounding boxes, making it ideal for fast-paced sports footage.
 - Fine-tuning was performed on custom football datasets to boost recognition accuracy in real-game environments.
-        ![alt text](results/player_detect_res.png)
 
 ---
 
@@ -96,6 +99,7 @@ git clone https://github.com/KaiyangZhou/deep-person-reid.git
 - [Link to Model and assests](https://drive.google.com/drive/folders/1VAzygoEnSoDvWJQ2JVrM6O-O4Q7k5rm0?usp=sharing)
 
 ---
+
 
 
 
