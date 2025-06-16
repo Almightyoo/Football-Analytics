@@ -29,7 +29,7 @@ score_threshold_new = 0.8
 # video_path = 'assets/videos/0-10.mp4'
 # video_path = 'assets/videos/0-100.mp4'
 video_path = 'assets/videos/15sec_input_720p.mp4'
-output_path = "output/final_tracking_with_reid1.mp4"
+output_path = "output/final_tracking_with_reid2.mp4"
 player_detection_model_path = 'models/best.pt'
 
 
@@ -60,7 +60,7 @@ reid_transform = transforms.Compose([
 ])
 
 
-# * reid image transform
+# * reid image embedding extraction
 def extract_features(crop: np.ndarray) -> np.ndarray:
     img = Image.fromarray(crop)
     img = reid_transform(img).unsqueeze(0).to(device)

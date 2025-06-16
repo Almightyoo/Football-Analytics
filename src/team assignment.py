@@ -46,11 +46,11 @@ def extract_team_assignments(
         lower_green = np.array([30, 30, 30])
         upper_green = np.array([90, 255, 255])
         green_mask = cv2.inRange(hsv, lower_green, upper_green)
-        blurred_mask = cv2.GaussianBlur(green_mask, (5, 5), 0)
-        player_mask = cv2.bitwise_not(blurred_mask)
-        kernel = np.ones((3, 3), np.uint8)
-        player_mask = cv2.morphologyEx(player_mask, cv2.MORPH_OPEN, kernel)
-        player_mask = cv2.morphologyEx(player_mask, cv2.MORPH_DILATE, kernel, iterations=1)
+        # blurred_mask = cv2.GaussianBlur(green_mask, (5, 5), 0)
+        player_mask = cv2.bitwise_not(green_mask)
+        # kernel = np.ones((3, 3), np.uint8)
+        # player_mask = cv2.morphologyEx(player_mask, cv2.MORPH_OPEN, kernel)
+        # player_mask = cv2.morphologyEx(player_mask, cv2.MORPH_DILATE, kernel, iterations=1)
         masked_player = cv2.bitwise_and(crop, crop, mask=player_mask)
         return masked_player, player_mask
 
@@ -78,7 +78,7 @@ def extract_team_assignments(
             all_colors.append(dominant)
 
         player_colors = np.array(all_colors)
-        features = player_colors[:, :2]
+        features = player_colors[:, 0:1]
 
         scaler = StandardScaler()
         scaled = scaler.fit_transform(features)

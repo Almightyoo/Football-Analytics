@@ -80,6 +80,9 @@ This project combines modern deep learning and computer vision techniques to cre
 ## Getting Started
 Follow these steps to set up the project locally:
 
+### Requirements
+- Python 3.12 or higher
+
 
 ### 1. Clone the repository
 ```sh
@@ -104,6 +107,8 @@ git clone https://github.com/KaiyangZhou/deep-person-reid.git
 ```sh
 python3 run src/main_tracking.py
 ```
+
+
 
 ---
 
