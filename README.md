@@ -96,7 +96,6 @@ python -m venv venv
 source venv/bin/activate # for macOS/Linux
 
 pip install -r requirements.txt
-# git clone https://github.com/KaiyangZhou/deep-person-reid.git
 
 ```
 ### 3. Model and Assets Link
