@@ -5,7 +5,7 @@ A computer vision pipeline for detecting, identifying, and continuously tracking
 At each frame, the system detects all players using YOLO, extracts their visual appearance embeddings using a ReID model, and links identities across frames to create smooth and accurate player tracks.
 
 # Algoritm
-![Flowchart](results/flowchart.png)
+![Flowchart](results/pipeline_flowchart.jpg)
 
 ## Results
 ![Team assignment](results/final_tracking_with_reid1-ezgif.com-optimize.gif)
@@ -96,7 +96,7 @@ python -m venv venv
 source venv/bin/activate # for macOS/Linux
 
 pip install -r requirements.txt
-git clone https://github.com/KaiyangZhou/deep-person-reid.git
+# git clone https://github.com/KaiyangZhou/deep-person-reid.git
 
 ```
 ### 3. Model and Assets Link
